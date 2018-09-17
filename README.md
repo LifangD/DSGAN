@@ -21,6 +21,7 @@ python 2.7
 1.句子特征提取，论文中使用Simple CNN
 (Relation Classification via Convolutional Deep Neural Network)
 (Event detection and domain adaptation with convolutional neural networks)
+
 2. 一个最大化使用数据的策略，如果sentence bag里所有句子被generator认为是negative,entity pair会被认为是negative的一类
 3. 一些参数：
     - 关系数量：52+1
@@ -39,8 +40,8 @@ python 2.7
 2. 论文中未提到ND和NG是如何划分的
 3. 我的想法：
 P：heldout中的trainPositive和kb manual中的trainPostive (Positive个数相比Negative要少很多)
-Ng: heldout中的trainNegative
-Nd: kbmanual中的trainNegative 因为要求判别器一开始的准确率很高，所以采用人工标注的负例应该会更好一些
+- Ng: heldout中的trainNegative
+- Nd: kbmanual中的trainNegative 因为要求判别器一开始的准确率很高，所以采用人工标注的负例应该会更好一些
 用训练好的生成器过滤P 生成true positive samples，接着用一般关系模型训练relation extractor，
 最后再用 heldout中的testNegative 和testPositive测试用不同正例训练出来的extractor的好坏。
 
@@ -55,7 +56,7 @@ Nd: kbmanual中的trainNegative 因为要求判别器一开始的准确率很高
 4. 论文中提到NG和ND不一样，要怎么划分？（划分比例）
 
 ## 参考：
-[1]Qin P, Xu W, Wang W Y. DSGAN: Generative Adversarial Training for Distant Supervision Relation Extraction[J]. arXiv preprint arXiv:1805.09929, 2018.
-[2]https://github.com/abarthakur/clustering_riedel_dataset
-[3]https://github.com/ShomyLiu/pytorch-relation-extraction
-[4]https://github.com/cai-lw/KBGAN
+- [1]Qin P, Xu W, Wang W Y. DSGAN: Generative Adversarial Training for Distant Supervision Relation Extraction[J]. arXiv preprint arXiv:1805.09929, 2018.
+- [2]https://github.com/abarthakur/clustering_riedel_dataset
+- [3]https://github.com/ShomyLiu/pytorch-relation-extraction
+- [4]https://github.com/cai-lw/KBGAN
