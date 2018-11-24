@@ -6,8 +6,8 @@ Python 2.7
 1. 数据预处理
     - 初始数据：origin_data
         利用别人的代码抽取pb文件数据转成tsv,see:
-        https://github.com/abarthakur/clustering_riedel_dataset  
-        (抽出来的tsv 中间的空格需要替换)
+        https://github.com/abarthakur/clustering_riedel_dataset    
+        (抽出来的tsv 中间的空格需要替换)  
         https://github.com/knightBoy/riedel_dataset  
         (如果是python3上,读取时改成二进制读取/写入，因为Unicodecsv里会用到decode() )
     - txt转npy: pre_process.py
